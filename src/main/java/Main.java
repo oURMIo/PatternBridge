@@ -6,14 +6,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Animal cat = new Animal();
-        Animal dog = new Animal();
-
-        cat.print();
-        cat.feed();
-        cat.send();
+        Animal cat = new Animal(new Cat());
+        Animal dog = new Animal(new Dog());
 
         all(cat);
-//        all(dog);
+        all(dog);
     }
 }

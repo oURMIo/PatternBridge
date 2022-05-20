@@ -1,7 +1,7 @@
 public class AnimalType {
-    public final String type;
-    public final boolean active;
-    public final double kgMeat;
+    private final String type;
+    private final boolean active;
+    private final double kgMeat;
 
     public AnimalType(String type, boolean active, double kgMeat) {
         this.type = type;
@@ -9,12 +9,14 @@ public class AnimalType {
         this.kgMeat = kgMeat;
     }
 
-    public void getInfo(){
-        System.out.printf(" It's a %s and it needs %s kg meat %n",type,kgMeat);
-        if (active){
-            System.out.printf(" It's like play with u) %n %n");
-        } else {
-            System.out.printf(" It's like sit on your knees %n %n");
-        }
+    //getters
+    public String getType() {
+        return type;
+    }
+    public boolean isActive() {
+        return active;
+    }
+    public double getKgMeat() {
+        return kgMeat;
     }
 }
