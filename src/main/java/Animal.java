@@ -17,23 +17,23 @@ public class Animal {
     }
 
     public void feed(){
-        System.out.printf("give %s kg meat",meal);
+        System.out.printf("give %s kg meal %n",meal);
     }
 
     public void send() {
         if (act) {
-            System.out.printf("     Send this animal in village %n %n");
+            System.out.printf(" Send this animal in village %n %n");
         } else {
-            System.out.printf("     Send this animal in home %n %n");
+            System.out.printf(" Send this animal in home %n %n");
         }
     }
 
     public void print(){
-        System.out.printf(" It's a %s and it needs %s kg meat %n",name,meal);
+        System.out.printf(" It's a %s and it needs %s kg meal %n",name,meal);
         if (act){
-            System.out.printf(" It's like play with u) %n %n");
+            System.out.printf(" It's like play with u) %n");
         } else {
-            System.out.printf(" It's like sit on your knees %n %n");
+            System.out.printf(" It's like sit on your knees %n");
         }
     }
 }
