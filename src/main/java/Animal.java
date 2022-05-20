@@ -5,15 +5,10 @@ public class Animal {
     private boolean act;
     private double meal;
 
-    public Animal(Cat cat) {
-        this.name = cat.getType();
-        this.act = cat.isActive();
-        this.meal = cat.getKgMeat();
-    }
-    public Animal(Dog dog){
-        this.name = dog.getType();
-        this.act = dog.isActive();
-        this.meal = dog.getKgMeat();
+    public Animal(AnimalType animalType) {
+        this.name = animalType.getType();
+        this.act = animalType.isActive();
+        this.meal = animalType.getKgMeat();
     }
 
     public void feed(){
