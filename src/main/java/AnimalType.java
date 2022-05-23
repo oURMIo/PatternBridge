@@ -1,6 +1,6 @@
 public class AnimalType {
-    private String type;
-    private double kgMeat;
+    protected String type;
+    protected double kgMeat;
 
     public AnimalType(String type, double kgMeat) {
         this.type = type;

@@ -1,11 +1,12 @@
 public class Animal {
-    AnimalType animalType;
-    private static String character;
-    private static boolean active;
+    protected static String character;
+    protected static boolean active;
+    protected final AnimalType animalType;
 
-    public Animal(String character,boolean active){
+    public Animal(String character,boolean active, AnimalType animalType){
         Animal.character = character;
         Animal.active = active;
+        this.animalType = animalType;
     }
 
     public void feed() {
@@ -14,13 +15,16 @@ public class Animal {
 
     public void send() {
         if (active) {
-            System.out.printf(" This animal is %s and send in village %n %n",character);
+            System.out.printf("This animal is %s so send in village %n",character);
         } else {
-            System.out.printf(" This animal is %s and send in home %n %n",character);
+            System.out.printf("This animal is %s so send in home %n",character);
         }
     }
 
     public void print() {
-        System.out.printf(" It's a %s and it needs %s kg meal %n. /// %s ///", animalType.getType(), animalType.getKgMeat(),character);
+        System.out.printf(" It's a %s %s! It needs %s kg meal %n",
+                character,
+                animalType.getType(),
+                animalType.getKgMeat());
     }
 }
