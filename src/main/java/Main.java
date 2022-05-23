@@ -6,14 +6,14 @@ public class Main {
         System.out.println();
     }
     private static Animal createAnimal(){
-        if (Math.random() * 2 <= 1) {
-            if (Math.random() * 2 <= 1){
+        if (Math.random() * 2 < 1) {
+            if (Math.random() * 2 < 1){
                 return new Wild(new Cat());
             }else {
                 return new Wild(new Dog());
             }
-        }else {
-            if (Math.random() * 2 <= 1){
+        } else {
+            if (Math.random() * 2 < 1){
                 return new Homely(new Cat());
             }else {
                 return new Homely(new Dog());

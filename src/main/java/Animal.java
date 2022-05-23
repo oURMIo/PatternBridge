@@ -1,11 +1,11 @@
 public class Animal {
-    protected static String character;
-    protected static boolean active;
+    protected String character;
+    protected boolean active;
     protected final AnimalType animalType;
 
     public Animal(String character,boolean active, AnimalType animalType){
-        Animal.character = character;
-        Animal.active = active;
+        this.character = character;
+        this.active = active;
         this.animalType = animalType;
     }
 
