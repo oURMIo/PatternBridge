@@ -1,23 +1,26 @@
-public record Animal(AnimalType animalType) {
+public class Animal {
+    AnimalType animalType;
+    private static String character;
+    private static boolean active;
+
+    public Animal(String character,boolean active){
+        Animal.character = character;
+        Animal.active = active;
+    }
 
     public void feed() {
         System.out.printf("give %s kg meal %n", animalType.getKgMeat());
     }
 
     public void send() {
-        if (animalType.isActive()) {
-            System.out.printf(" Send this animal in village %n %n");
+        if (active) {
+            System.out.printf(" This animal is %s and send in village %n %n",character);
         } else {
-            System.out.printf(" Send this animal in home %n %n");
+            System.out.printf(" This animal is %s and send in home %n %n",character);
         }
     }
 
     public void print() {
-        System.out.printf(" It's a %s and it needs %s kg meal %n", animalType.getType(), animalType.getKgMeat());
-        if (animalType.isActive()) {
-            System.out.printf(" It's like play with u) %n");
-        } else {
-            System.out.printf(" It's like sit on your knees %n");
-        }
+        System.out.printf(" It's a %s and it needs %s kg meal %n. /// %s ///", animalType.getType(), animalType.getKgMeat(),character);
     }
 }

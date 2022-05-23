@@ -4,12 +4,27 @@ public class Main {
         animal.feed();
         animal.send();
     }
+    private static Animal createAnimal(){
+        if (Math.random() *2 < 1) {
+            if (Math.random() *2 <1){
+                return new Wild(new Cat());
+            }else {
+                return new Wild(new Dog());
+            }
+        }else {
+            if (Math.random() *2 <1){
+                return new Homely(new Cat());
+            }else {
+                return new Homely(new Dog());
+            }
+        }
+    }
 
     public static void main(String[] args) {
-        Animal cat = new Animal(new Cat());
-        Animal dog = new Animal(new Dog());
+        Animal animal1 = createAnimal();
+        Animal animal2 = createAnimal();
 
-        all(cat);
-        all(dog);
+        all(animal1);
+        all(animal2);
     }
 }

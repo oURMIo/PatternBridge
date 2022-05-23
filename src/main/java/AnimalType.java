@@ -1,11 +1,9 @@
 public class AnimalType {
-    private final String type;
-    private final boolean active;
-    private final double kgMeat;
+    private String type;
+    private double kgMeat;
 
-    public AnimalType(String type, boolean active, double kgMeat) {
+    public AnimalType(String type, double kgMeat) {
         this.type = type;
-        this.active = active;
         this.kgMeat = kgMeat;
     }
 
@@ -13,10 +11,15 @@ public class AnimalType {
     public String getType() {
         return type;
     }
-    public boolean isActive() {
-        return active;
-    }
     public double getKgMeat() {
         return kgMeat;
+    }
+
+    //setters
+    public void setType(String type){
+        this.type = type;
+    }
+    public void setKgMeat(double kgMeat){
+        this.kgMeat = kgMeat;
     }
 }

@@ -1,5 +1,5 @@
 public class Cat extends AnimalType{
     public Cat() {
-        super("Cat",false,0.6);
+        super("Cat",0.6);
     }
 }
